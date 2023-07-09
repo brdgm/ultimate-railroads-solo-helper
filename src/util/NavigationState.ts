@@ -9,7 +9,7 @@ export default class NavigationState {
   readonly turn : number
   readonly playerTurn : boolean
   readonly botTurn : boolean
-  readonly availableTracks: Track[]
+  readonly turnData : Turn
   readonly cardDeck: CardDeck
 
   public constructor(route : RouteLocation, state: State) {    
@@ -18,9 +18,8 @@ export default class NavigationState {
     this.playerTurn = (route.name == 'TurnPlayer')
     this.botTurn = (route.name == 'TurnBot')
     
-    const turn = getTurn(this.round, this.turn, state.rounds)
-    this.availableTracks = turn.availableTracks
-    this.cardDeck = CardDeck.fromPersistence(turn.cardDeck)
+    this.turnData = getTurn(this.round, this.turn, state.rounds)
+    this.cardDeck = CardDeck.fromPersistence(this.turnData.cardDeck)
   }
 
 }

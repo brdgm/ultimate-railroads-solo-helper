@@ -2,18 +2,19 @@ import findMandatory from 'brdgm-commons/src/util/map/findMandatory';
 import Card from './Card';
 import Module from './enum/Module';
 import Placement from './enum/Placement';
+import Track from './enum/Track';
 
 const cards = [
   { id: 'build-locomotive-and-factory', placement: Placement.WORKER, workerCount: 3 },
   { id: 'build-locomotive-or-factory', placement: Placement.WORKER, workerCount: 1 },
-  { id: 'build-track-level1-3step', placement: Placement.WORKER, workerCount: 2 },
-  { id: 'build-track-level2-3step', placement: Placement.WORKER, workerCount: 2 },
-  { id: 'build-track-level3-1step', placement: Placement.WORKER, workerCount: 1 },
-  { id: 'build-track-level3-2step', placement: Placement.WORKER, workerCount: 2 },
-  { id: 'build-track-level4-1step', placement: Placement.WORKER, workerCount: 1 },
-  { id: 'build-track-level4-2step', placement: Placement.WORKER, workerCount: 2 },
-  { id: 'build-track-level5-1step', placement: Placement.WORKER, workerCount: 1 },
-  { id: 'build-track-level5-2step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'build-track-level1-3step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL1 },
+  { id: 'build-track-level2-3step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL2 },
+  { id: 'build-track-level3-1step', placement: Placement.WORKER, workerCount: 1, track: Track.LEVEL3 },
+  { id: 'build-track-level3-2step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL3 },
+  { id: 'build-track-level4-1step', placement: Placement.WORKER, workerCount: 1, track: Track.LEVEL4 },
+  { id: 'build-track-level4-2step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL4 },
+  { id: 'build-track-level5-1step', placement: Placement.WORKER, workerCount: 1, track: Track.LEVEL5 },
+  { id: 'build-track-level5-2step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL5 },
   { id: 'build-track-wild-2step', placement: Placement.WORKER_COIN, workerCount: 1 },
   { id: 'doubler', placement: Placement.WORKER, workerCount: 1 },
   { id: 'hire-engineer', placement: Placement.COIN, workerCount: 0 },

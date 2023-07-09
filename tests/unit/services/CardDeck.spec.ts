@@ -1,5 +1,6 @@
 import CardDeck from '@/services/CardDeck'
 import Module from '@/services/enum/Module'
+import Track from '@/services/enum/Track'
 import { expect } from 'chai'
 
 describe('services/CardDeck', () => {
@@ -30,15 +31,30 @@ describe('services/CardDeck', () => {
     expect(deck.discard.length, 'discard size').to.eq(0)
     expect(deck.currentCard?.id, 'current card').to.eq('doubler')
 
-    expect(deck.draw()).to.true
+    expect(deck.draw([Track.LEVEL1])).to.true
     expect(deck.pile.length, 'pile size').to.eq(1)
     expect(deck.discard.length, 'discard size').to.eq(1)
     expect(deck.currentCard?.id, 'current card').to.eq('hire-engineer')
 
-    expect(deck.draw()).to.false
+    expect(deck.draw([Track.LEVEL1])).to.false
     expect(deck.pile.length, 'pile size').to.eq(0)
     expect(deck.discard.length, 'discard size').to.eq(2)
     expect(deck.currentCard, 'current card').to.undefined
+  })
+
+  it('drawUnavailableTrack', () => {
+    const deck = CardDeck.fromPersistence({pile:['doubler',
+        'build-track-level5-1step','build-track-level3-2step','build-track-level2-3step'],
+        discard:[]})
+
+    expect(deck.pile.length, 'pile size').to.eq(4)
+    expect(deck.discard.length, 'discard size').to.eq(0)
+    expect(deck.currentCard?.id, 'current card').to.eq('doubler')
+
+    expect(deck.draw([Track.LEVEL1,Track.LEVEL2])).to.true
+    expect(deck.pile.length, 'pile size').to.eq(1)
+    expect(deck.discard.length, 'discard size').to.eq(3)
+    expect(deck.currentCard?.id, 'current card').to.eq('build-track-level2-3step')
   })
 
   it('prepareForNewRound', () => {

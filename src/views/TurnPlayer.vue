@@ -47,9 +47,9 @@ export default defineComponent({
       const nextRoundNo = this.round
       const nextTurnNo = this.turn + 1
       const cardDeck = this.navigationState.cardDeck
-      cardDeck.draw()
+      cardDeck.draw(this.navigationState.turnData.availableTracks)
       const nextTurn = { round: nextRoundNo, turn: nextTurnNo,
-            availableTracks: this.navigationState.availableTracks,
+            availableTracks: this.navigationState.turnData.availableTracks,
             cardDeck: cardDeck.toPersistence() }
       this.state.storeTurn(nextTurn)
 

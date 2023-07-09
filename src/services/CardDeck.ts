@@ -3,6 +3,7 @@ import Card from './Card'
 import Cards from './Cards'
 import { CardDeckPersistence } from '@/store/state'
 import Module from './enum/Module'
+import Track from './enum/Track'
 
 export default class CardDeck {
 
@@ -27,16 +28,23 @@ export default class CardDeck {
   }
 
   /**
-   * Draws a card from the draw pile.
+   * Draws a card from the draw pile. If this card related to a track level not yet available, a new card is drawn immediately.
    * If the pile is empty, the discard pile is reshuffled before drawing.
+   * @param availableTracks Available track levels from player
    * @returns true if a new card was drawn
    */
-  public draw() : boolean {
+  public draw(availableTracks: Track[]) : boolean {
     const discardCard = this._pile.shift()
     if (discardCard) {
       this._discard.push(discardCard)
     }
-    return this._pile.length > 0
+
+    if (this.currentCard && this.currentCard.track && !availableTracks.includes(this.currentCard.track)) {
+      return this.draw(availableTracks)
+    }
+    else {
+      return this._pile.length > 0
+    }
   }
 
   /**
