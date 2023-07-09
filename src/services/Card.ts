@@ -1,7 +1,6 @@
-import Action from "./enum/Action"
+import Module from "./enum/Module"
 
 export default interface Card {
   id: string
-  actions: Action[]
-  actionTileIndex: number
+  modules?: Module[]
 }
