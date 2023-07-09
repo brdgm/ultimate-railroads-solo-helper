@@ -6,6 +6,21 @@
     "play2": "This helper application replaces the card deck and provides help inside the app. Beat your own score!",
     "feedback": "Discussion and Feedback:"
   },
+  "setup": {
+    "title": "Setup Game",
+    "board": {
+      "title": "Setup for Solo Variant",
+      "block2CoinsActionSpace": "Place a blockade on the <b>2 coins action space</b>. This action space is not available.",
+      "unusedComponents": "Set the last round token, the turn order cards, and the starting bonus cards aside. You also do not need the turn order pawns, because turn order is not used in this variant.",
+      "take5Coins": "Take <b>5 coins</b>.",
+      "placeWorkers50points": "Give Emil <b>6 workers</b> in the color of your choice. Place his other 2 workers next to space 50 of the scoring track. Emil does not use any other components."
+    },
+    "modules": {
+      "title": "Enable Modules",
+      "coal": "Coal Module",
+      "manufactory-train": "Manufactory Train Module"
+    }
+  },
   "notfound": {
     "title": "Not Found"
   },

@@ -6,6 +6,21 @@
     "play2": "Diese Applikation ersetzt das Kartendeck und stellt Spielhilfen bereit. Erreiche deine höchste Punktzahl!",
     "feedback": "Discussion and Feedback:"
   },
+  "setup": {
+    "title": "Spielaufbau",
+    "board": {
+      "title": "Aufbau für die Solovariante",
+      "block2CoinsActionSpace": "Decke das <b>Aktionsfeld 2 Münzen</b> mit dem Abdeckkreuz ab. Dieses Feld steht hier nicht zur Verfügung.",
+      "unusedComponents": "Das Letzte-Runde-Plättchen, die Reihenfolgekarten und die Startbonuskarten benötigst du nicht. Auch die Büste für die Zugreihenfolge benötigst du nicht. Die Reihenfolgeleiste hat in dieser Variante keine Bedeutung.",
+      "take5Coins": "Du nimmst dir <b>5 Münzen</b>.",
+      "placeWorkers50points": "Emil bekommt zunächst nur <b>6 seiner Arbeiter</b> (in einer beliebigen Farbe). Seine 2 anderen Arbeiter stellst du neben das Feld 50 der Zählleiste. Emil benötigt kein weiteres Material."
+    },
+    "modules": {
+      "title": "Module aktivieren",
+      "coal": "Kohle-Modul",
+      "manufactory-train": "Werklok-Modul"
+    }
+  },
   "notfound": {
     "title": "Nicht gefunden"
   },
