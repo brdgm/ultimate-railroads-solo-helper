@@ -33,7 +33,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 img {
   margin-bottom: 10px;
   &.block-2coins-action-space {
