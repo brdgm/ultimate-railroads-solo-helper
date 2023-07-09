@@ -18,6 +18,7 @@ import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import BoardSetup from '@/components/setup/BoardSetup.vue'
 import ModuleSetup from '@/components/setup/ModuleSetup.vue'
+import RoundManager from '@/services/RoundManager'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -34,7 +35,10 @@ export default defineComponent({
   methods: {
     startGame() : void {
       this.state.resetGame()
-      this.$router.push('/round/1/turn/1')
+      const roundManager = new RoundManager(this.state)
+      const round = roundManager.prepareFirstRound()
+      this.state.storeRound(round)
+      this.$router.push('/round/1/turn/1/bot')
     }
   }
 })

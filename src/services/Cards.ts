@@ -1,26 +1,27 @@
 import findMandatory from 'brdgm-commons/src/util/map/findMandatory';
 import Card from './Card';
 import Module from './enum/Module';
+import Placement from './enum/Placement';
 
 const cards = [
-  { id: 'build-locomotive-and-factory' },
-  { id: 'build-locomotive-or-factory' },
-  { id: 'build-track-level1-3step' },
-  { id: 'build-track-level2-3step' },
-  { id: 'build-track-level3-1step' },
-  { id: 'build-track-level3-2step' },
-  { id: 'build-track-level4-1step' },
-  { id: 'build-track-level4-2step' },
-  { id: 'build-track-level5-1step' },
-  { id: 'build-track-level5-2step' },
-  { id: 'build-track-wild-2step' },
-  { id: 'doubler' },
-  { id: 'hire-engineer' },
-  { id: 'industry-1step' },
-  { id: 'industry-2step' },
-  { id: 'use-engineer-light-side' },
-  { id: 'module-coal', module: [Module.COAL] },
-  { id: 'module-manufactory-train', module: [Module.MANUFACTORY_TRAIN] }
+  { id: 'build-locomotive-and-factory', placement: Placement.WORKER, workerCount: 3 },
+  { id: 'build-locomotive-or-factory', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'build-track-level1-3step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'build-track-level2-3step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'build-track-level3-1step', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'build-track-level3-2step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'build-track-level4-1step', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'build-track-level4-2step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'build-track-level5-1step', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'build-track-level5-2step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'build-track-wild-2step', placement: Placement.WORKER_COIN, workerCount: 1 },
+  { id: 'doubler', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'hire-engineer', placement: Placement.COIN, workerCount: 0 },
+  { id: 'industry-1step', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'industry-2step', placement: Placement.WORKER, workerCount: 2 },
+  { id: 'use-engineer-light-side', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'module-coal', placement: Placement.WORKER, workerCount: 1, module: [Module.COAL] },
+  { id: 'module-manufactory-train', placement: Placement.WORKER, workerCount: 1, module: [Module.MANUFACTORY_TRAIN] }
 ]
 
 const cardsMap = new Map<string,Card>()

@@ -21,6 +21,21 @@
       "manufactory-train": "Manufactory Train Module"
     }
   },
+  "turnBot": {
+    "title": "Emil",
+    "placement": {
+      "worker": "Emil places {count} worker: | Emil places {count} workers:",
+      "coin": "Emil places 1 coin from the general supply:",
+      "worker-coin": "Emil places 1 worker and 1 coin from the general supply:"
+    }
+  },
+  "turnPlayer": {
+    "title": "Player",
+    "turn": "Take your turn."
+  },
+  "sideBar": {
+    "round": "Round"
+  },
   "notfound": {
     "title": "Not Found"
   },

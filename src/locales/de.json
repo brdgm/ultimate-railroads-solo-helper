@@ -21,6 +21,21 @@
       "manufactory-train": "Werklok-Modul"
     }
   },
+  "turnBot": {
+    "title": "Emil",
+    "placement": {
+      "worker": "Emil platziert {count} Arbeiter:",
+      "coin": "Emil platziert 1 Münze aus dem Vorrat:",
+      "worker-coin": "Emil platziert 1 Arbeiter und 1 Münze aus dem Vorrat:"
+    }
+  },
+  "turnPlayer": {
+    "title": "Spieler",
+    "turn": "Führe deinen Zug aus."
+  },
+  "sideBar": {
+    "round": "Runde"
+  },
   "notfound": {
     "title": "Nicht gefunden"
   },

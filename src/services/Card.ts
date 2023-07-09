@@ -1,6 +1,9 @@
+import Placement from "./enum/Placement"
 import Module from "./enum/Module"
 
 export default interface Card {
   id: string
-  modules?: Module[]
+  placement: Placement
+  workerCount: number 
+  modules?: Module[]  
 }
