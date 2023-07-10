@@ -1,4 +1,5 @@
 import CardDeck from '@/services/CardDeck'
+import Player from '@/services/enum/Player'
 import Track from '@/services/enum/Track'
 import { Round, State, Turn } from '@/store/state'
 import { RouteLocation } from 'vue-router'
@@ -7,18 +8,16 @@ export default class NavigationState {
 
   readonly round : number
   readonly turn : number
-  readonly playerTurn : boolean
-  readonly botTurn : boolean
+  readonly player : Player
   readonly turnData : Turn
   readonly cardDeck: CardDeck
 
   public constructor(route : RouteLocation, state: State) {    
     this.round = parseInt(route.params['round'] as string)
     this.turn = parseInt(route.params['turn'] as string)
-    this.playerTurn = (route.name == 'TurnPlayer')
-    this.botTurn = (route.name == 'TurnBot')
     
     this.turnData = getTurn(this.round, this.turn, state.rounds)
+    this.player = this.turnData.player
     this.cardDeck = CardDeck.fromPersistence(this.turnData.cardDeck)
   }
 
@@ -33,5 +32,5 @@ function getTurn(roundNo: number, turnNo: number, rounds: Round[]) : Turn {
     }
   }
   // fallback: should never happen
-  return { round: roundNo, turn: turnNo, availableTracks: [Track.LEVEL1], cardDeck: CardDeck.new([]).toPersistence() }
+  return { round: roundNo, turn: turnNo, player: Player.BOT, availableTracks: [Track.LEVEL1], cardDeck: CardDeck.new([]).toPersistence() }
 }

@@ -21,6 +21,7 @@ import BotAction from '@/components/round/BotAction.vue'
 import SideBar from '@/components/round/SideBar.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
+import Player from '@/services/enum/Player'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -54,7 +55,7 @@ export default defineComponent({
       const nextRoundNo = this.round
       const nextTurnNo = this.turn + 1
       const cardDeck = this.navigationState.cardDeck
-      const nextTurn = { round: nextRoundNo, turn: nextTurnNo,
+      const nextTurn = { round: nextRoundNo, turn: nextTurnNo, player: Player.PLAYER,
             availableTracks: this.navigationState.turnData.availableTracks,
             cardDeck: cardDeck.toPersistence() }
       this.state.storeTurn(nextTurn)

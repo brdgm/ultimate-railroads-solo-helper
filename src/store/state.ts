@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
 import Module from '@/services/enum/Module'
 import Track from '@/services/enum/Track'
+import Player from '@/services/enum/Player'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -52,6 +53,7 @@ export interface Round {
 export interface Turn {
   round: number
   turn: number
+  player: Player
   cardDeck: CardDeckPersistence
   availableTracks: Track[]
 }

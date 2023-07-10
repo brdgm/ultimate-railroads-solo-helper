@@ -11,6 +11,7 @@
 </template>
 
 <script lang="ts">
+import Player from '@/services/enum/Player';
 import Track from '@/services/enum/Track';
 import NavigationState from '@/util/NavigationState';
 import { defineComponent } from 'vue'
@@ -51,7 +52,7 @@ export default defineComponent({
       return this.navigationState.turnData.availableTracks.includes(track)
     },
     isAllowToggle(track: Track) : boolean {
-      return track != Track.LEVEL1 && !this.navigationState.botTurn
+      return this.navigationState.player == Player.PLAYER && track != Track.LEVEL1
     },
     toggle(track: Track) : void {
       if (!this.isAllowToggle(track)) {

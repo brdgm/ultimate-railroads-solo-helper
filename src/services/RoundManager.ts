@@ -2,6 +2,7 @@ import { Round, State, Turn } from "@/store/state"
 import Module from "./enum/Module"
 import CardDeck from "./CardDeck"
 import Track from "./enum/Track"
+import Player from "./enum/Player"
 
 export default class RoundManager {
 
@@ -20,9 +21,10 @@ export default class RoundManager {
   public prepareFirstRound() : Round {
     const round = 1
     const turn = 1
+    const player = Player.BOT
     const cardDeck = CardDeck.new(this._modules)
     const availableTracks : Track[] = [Track.LEVEL1]
-    const turns : Turn[] = [{ round, turn, cardDeck: cardDeck.toPersistence(), availableTracks }]
+    const turns : Turn[] = [{ round, turn, player, cardDeck: cardDeck.toPersistence(), availableTracks }]
     return { round, turns }
   }
 
