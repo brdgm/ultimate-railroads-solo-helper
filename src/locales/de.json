@@ -1,0 +1,105 @@
+{
+  "gameTitle": "Ultimate Railroads",
+  "home": {
+    "title": "Ultimate Railroads Solo Helper",
+    "play1": "Spiele gegen Emil, den Solo Mode-Gegner von <a href='https://boardgamegeek.com/boardgame/329591/ultimate-railroads' target='_blank' rel='noopener'><b>Ultimate Railroads</b></a>.",
+    "play2": "Diese Applikation ersetzt das Kartendeck und stellt Spielhilfen bereit. Erreiche deine höchste Punktzahl!",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "board": {
+      "title": "Aufbau für die Solovariante",
+      "block2CoinsActionSpace": "Decke das <b>Aktionsfeld 2 Münzen</b> mit dem Abdeckkreuz ab. Dieses Feld steht hier nicht zur Verfügung.",
+      "unusedComponents": "Das Letzte-Runde-Plättchen, die Reihenfolgekarten und die Startbonuskarten benötigst du nicht. Auch die Büste für die Zugreihenfolge benötigst du nicht. Die Reihenfolgeleiste hat in dieser Variante keine Bedeutung.",
+      "take5Coins": "Du nimmst dir <b>5 Münzen</b>.",
+      "placeWorkers50points": "Emil bekommt zunächst nur <b>6 seiner Arbeiter</b> (in einer beliebigen Farbe). Seine 2 anderen Arbeiter stellst du neben das Feld 50 der Zählleiste. Emil benötigt kein weiteres Material."
+    },
+    "modules": {
+      "title": "Module aktivieren",
+      "coal": "Kohle-Modul",
+      "manufactory-train": "Werklok-Modul"
+    }
+  },
+  "turnBot": {
+    "title": "Emil",
+    "placement": {
+      "worker": "Emil platziert {count} Arbeiter:",
+      "coin": "Emil platziert 1 Münze aus dem Vorrat:",
+      "worker-coin": "Emil platziert 1 Arbeiter und 1 Münze aus dem Vorrat:",
+      "use-engineer-light-side": "Emil platziert 1 Arbeiter auf dem Feld mit der horizontalen Ingenieurin auf dem Spielplan:"
+    },
+    "cardDeckEmpty": "Emils Stapel ist leer, er passt.",
+    "action": {
+      "placed": "Platziert",
+      "notPossible": "Nicht möglich",
+      "noWorkers": "Keine Arbeiter"
+    }
+  },
+  "turnPlayer": {
+    "title": "Spieler",
+    "turn": "Führe deinen Zug aus.",
+    "turnEmilPass1": "Emil hat gepasst, führe deine verbleibenden Züge aus.",
+    "turnEmilPass2": "Falls Emil einen weiteren Arbeiter bekommt, klicke auf <i>Weiter</i>.",
+    "turnEmilDeckExhausted": "Emils Stapel ist leer, führe deine verbleibenden Züge aus.",
+    "action": {
+      "endRound": "Ende Runde {round}"
+    }
+  },
+  "endOfRound": {
+    "title": "Ende Runde {round}",
+    "scorePoints": "Werte deine Punkte. Emil bekommt keine Punkte.",
+    "returnWorkers": "Setze alle eingesetzten Arbeiter zurück in den jeweiligen Vorrat."
+  },
+  "endOfGame": {
+    "title": "Spielende",
+    "scorePoints": "Werte deine Punkte inkl. der Endauswertung für Spielendekarten und Ingenieurinnen.",
+    "engineerMajority": "Bezüglich der Mehrheit vergleiche deine Ingenieurinnen mit denen, die Emil gesammelt hat."
+  },
+  "sideBar": {
+    "round": "Runde",
+    "rules": {
+      "title": "Regel-Hinweise",
+      "updateAvailableTracks": {
+        "title": "Verfügbare Gleisfarben aktualisieren",
+        "rule": "Halte während dines Zuges die verfügbaren Gleisfarben aktuell, wenn du eine neue Gleisfarbe freischaltest. Emil blockiert nur Felder, die für dich auch verfügbar sind, und überspringt alle Karten mit anderen Gleisfarben."
+      },
+      "emilBlocked": {
+        "title": "Emil ist selbst blockiert",
+        "rule": "Manchmal kann es passieren, dass Emil das Feld, das die aufgedeckte Karte zeigt, nicht blockieren kann. Entweder, weil er nicht mehr genügend Arbeiter hat oder weil das Feld bereits (von dir) besetzt ist. Wenn dies passiert, klicke auf <i>Nicht möglich</i>."
+      },
+      "emilCollectsLocomtivesEngineers": {
+        "title": "Emil sammelt Lokomotiven und Ingenieurinnen",
+        "rule": "Wenn Emil eine Lok nimmt oder eine Ingenieurin anwirbt, legst du das Plättchen zu Emil. Liegen keine Loks mehr in der Auslage, nimmt Emil die Fabrik mit der niedrigsten Zahl. Loks und Fabriken nimmt Emil nur weg, sie haben keine weitere Auswirkung für das Spiel. Die gesammelten Ingenieurinnen dienen nur zur Bestimmung der Mehrheit der Ingenieurinnen bei Spielende."
+      },
+      "emilGetsNewToys": {
+        "title": "Emil bekommt neues Spielzeug",
+        "rule": "Sobald du 50 Punkte erreicht hast, nimmst du 1 der beiden Arbeiter, die neben dem Feld 50 der Zählleiste stehen, und fügst ihn Emils Vorrat hinzu. Emil hat ab sofort 7 Arbeiter. Sobald du 150 Punkte erreicht hast, gibst du Emil den letzten Arbeiter. Meistens wird dies in der Wertung passieren. Solltest du das Feld in der laufenden Runde erreichen und Emil hat noch nicht gepasst, kann er seinen neuen Arbeiter in dieser Runde noch nutzen."
+      }
+    }
+  },
+  "notfound": {
+    "title": "Nicht gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist Du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}
