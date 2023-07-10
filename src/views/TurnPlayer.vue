@@ -36,7 +36,6 @@ import SideBar from '@/components/round/SideBar.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import Player from '@/services/enum/Player'
-import RoundManager from '@/services/RoundManager'
 
 export default defineComponent({
   name: 'TurnPlayer',
@@ -83,15 +82,10 @@ export default defineComponent({
     },
     endRound() : void {
       if (this.round == 6) {
-        // TODO: show end game screen
+        this.$router.push(`/round/${this.round}/turn/${this.turn}/endOfGame`)
       }
       else {
-        const roundManager = new RoundManager(this.state)
-        const nextRound = roundManager.prepareNextRound(this.round + 1,
-            this.navigationState.turnData.availableTracks, this.navigationState.cardDeck)
-        this.state.storeRound(nextRound)
-
-        this.$router.push(`/round/${nextRound.round}/turn/1/bot`)
+        this.$router.push(`/round/${this.round}/turn/${this.turn}/endOfRound`)
       }
     }
   }

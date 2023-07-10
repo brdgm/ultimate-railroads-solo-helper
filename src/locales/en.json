@@ -46,6 +46,16 @@
       "endRound": "End Round {round}"
     }
   },
+  "endOfRound": {
+    "title": "End of Round {round}",
+    "scorePoints": "Score your points. Emil does not get any points.",
+    "returnWorkers": "Return all workers to their respective supplies."
+  },
+  "endOfGame": {
+    "title": "End of Game",
+    "scorePoints": "Score your points incl. end game scoring with end bonus cards and engineers.",
+    "engineerMajority": "Compare your engineers with those collected by Emil regarding the majority."
+  },
   "sideBar": {
     "round": "Round",
     "rules": {

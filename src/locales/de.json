@@ -46,6 +46,16 @@
       "endRound": "Ende Runde {round}"
     }
   },
+  "endOfRound": {
+    "title": "Ende Runde {round}",
+    "scorePoints": "Werte deine Punkte. Emil bekommt keine Punkte.",
+    "returnWorkers": "Setze alle eingesetzten Arbeiter zurück in den jeweiligen Vorrat."
+  },
+  "endOfGame": {
+    "title": "Spielende",
+    "scorePoints": "Werte deine Punkte inkl. der Endauswertung für Spielendekarten und Ingenieurinnen.",
+    "engineerMajority": "Bezüglich der Mehrheit vergleiche deine Ingenieurinnen mit denen, die Emil gesammelt hat."
+  },
   "sideBar": {
     "round": "Runde",
     "rules": {

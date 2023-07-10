@@ -11,6 +11,7 @@ export default class NavigationState {
   readonly player : Player
   readonly turnData : Turn
   readonly cardDeck: CardDeck
+  readonly lastTurnLastRound? : number
 
   public constructor(route : RouteLocation, state: State) {    
     this.round = parseInt(route.params['round'] as string)
@@ -19,6 +20,10 @@ export default class NavigationState {
     this.turnData = getTurn(this.round, this.turn, state.rounds)
     this.player = this.turnData.player
     this.cardDeck = CardDeck.fromPersistence(this.turnData.cardDeck)
+
+    if (this.round > 1) {
+      this.lastTurnLastRound = getLastTurn(this.round - 1, state.rounds)?.turn
+    }
   }
 
 }
@@ -33,4 +38,12 @@ function getTurn(roundNo: number, turnNo: number, rounds: Round[]) : Turn {
   }
   // fallback: should never happen
   return { round: roundNo, turn: turnNo, player: Player.BOT, availableTracks: [Track.LEVEL1], cardDeck: CardDeck.new([]).toPersistence() }
+}
+
+function getLastTurn(roundNo: number, rounds: Round[]) : Turn|undefined {
+  const round = rounds.find(item => item.round == roundNo)
+  if (round) {
+    return round.turns[round.turns.length - 1]
+  }
+  return undefined
 }

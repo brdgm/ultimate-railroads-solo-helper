@@ -64,6 +64,9 @@ export default defineComponent({
       if (this.turn > 1) {
         return `/round/${this.round}/turn/${this.turn - 1}/player`
       }
+      else if (this.round > 1 && this.navigationState.lastTurnLastRound) {
+        return `/round/${this.round - 1}/turn/${this.navigationState.lastTurnLastRound}/endOfRound`
+      }
       else {
         return ''
       }
