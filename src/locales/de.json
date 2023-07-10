@@ -29,11 +29,22 @@
       "worker-coin": "Emil platziert 1 Arbeiter und 1 Münze aus dem Vorrat:",
       "use-engineer-light-side": "Emil platziert 1 Arbeiter auf dem Feld mit der horizontalen Ingenieurin auf dem Spielplan:"
     },
-    "cardDeckEmpty": "Emils Stapel ist leer, er passt."
+    "cardDeckEmpty": "Emils Stapel ist leer, er passt.",
+    "action": {
+      "placed": "Platziert",
+      "notPossible": "Nicht möglich",
+      "noWorkers": "Keine Arbeiter"
+    }
   },
   "turnPlayer": {
     "title": "Spieler",
-    "turn": "Führe deinen Zug aus."
+    "turn": "Führe deinen Zug aus.",
+    "turnEmilPass1": "Emil hat gepasst, führe deine verbleibenden Züge aus.",
+    "turnEmilPass2": "Falls Emil einen weiteren Arbeiter bekommt, klicke auf <i>Weiter</i>.",
+    "turnEmilDeckExhausted": "Emils Stapel ist leer, führe deine verbleibenden Züge aus.",
+    "action": {
+      "endRound": "Ende Runde {round}"
+    }
   },
   "sideBar": {
     "round": "Runde",
@@ -45,7 +56,7 @@
       },
       "emilBlocked": {
         "title": "Emil ist selbst blockiert",
-        "rule": "Manchmal kann es passieren, dass Emil das Feld, das die aufgedeckte Karte zeigt, nicht blockieren kann. Entweder, weil er nicht mehr genügend Arbeiter hat oder weil das Feld bereits (von dir) besetzt ist. Wenn dies passiert, klicke auf XXX."
+        "rule": "Manchmal kann es passieren, dass Emil das Feld, das die aufgedeckte Karte zeigt, nicht blockieren kann. Entweder, weil er nicht mehr genügend Arbeiter hat oder weil das Feld bereits (von dir) besetzt ist. Wenn dies passiert, klicke auf <i>Nicht möglich</i>."
       },
       "emilCollectsLocomtivesEngineers": {
         "title": "Emil sammelt Lokomotiven und Ingenieurinnen",

@@ -3,10 +3,25 @@
 
   <h1>{{t('turnPlayer.title')}}</h1>
 
-  <p class="mt-4" v-html="t('turnPlayer.turn')"></p>
+  <div class="mt-4">
+    <template v-if="emilDeckExhausted">
+      <p v-html="t('turnPlayer.turnEmilDeckExhausted')"></p>
+    </template>
+    <template v-else-if="emilPass">
+      <p v-html="t('turnPlayer.turnEmilPass1')"></p>
+      <p v-html="t('turnPlayer.turnEmilPass2')"></p>
+    </template>
+    <template v-else>
+      <p v-html="t('turnPlayer.turn')"></p>
+    </template>
+  </div>
 
-  <button class="btn btn-success btn-lg mt-4" @click="next()">
+  <button class="btn btn-success btn-lg mt-4 me-2" @click="next()" v-if="!emilDeckExhausted">
     {{t('action.next')}}
+  </button>
+
+  <button class="btn btn-outline-secondary btn-lg mt-4" @click="endRound()">
+    {{t('turnPlayer.action.endRound', {round})}}
   </button>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
@@ -21,6 +36,7 @@ import SideBar from '@/components/round/SideBar.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import Player from '@/services/enum/Player'
+import RoundManager from '@/services/RoundManager'
 
 export default defineComponent({
   name: 'TurnPlayer',
@@ -41,6 +57,12 @@ export default defineComponent({
   computed: {
     backButtonRouteTo() : string {
       return `/round/${this.round}/turn/${this.turn - 1}/bot`
+    },
+    emilDeckExhausted() : boolean {
+      return this.navigationState.cardDeck.currentCard == undefined
+    },
+    emilPass() : boolean|undefined {
+      return this.navigationState.turnData.emilPass
     }
   },
   methods: {
@@ -48,13 +70,29 @@ export default defineComponent({
       const nextRoundNo = this.round
       const nextTurnNo = this.turn + 1
       const cardDeck = this.navigationState.cardDeck
-      cardDeck.draw(this.navigationState.turnData.availableTracks)
+      const emilPass = this.emilPass
+      if (!emilPass) {
+        cardDeck.draw(this.navigationState.turnData.availableTracks)
+      }
       const nextTurn = { round: nextRoundNo, turn: nextTurnNo, player: Player.BOT,
             availableTracks: this.navigationState.turnData.availableTracks,
-            cardDeck: cardDeck.toPersistence() }
+            cardDeck: cardDeck.toPersistence(), emilPass }
       this.state.storeTurn(nextTurn)
 
       this.$router.push(`/round/${nextRoundNo}/turn/${nextTurnNo}/bot`)
+    },
+    endRound() : void {
+      if (this.round == 6) {
+        // TODO: show end game screen
+      }
+      else {
+        const roundManager = new RoundManager(this.state)
+        const nextRound = roundManager.prepareNextRound(this.round + 1,
+            this.navigationState.turnData.availableTracks, this.navigationState.cardDeck)
+        this.state.storeRound(nextRound)
+
+        this.$router.push(`/round/${nextRound.round}/turn/1/bot`)
+      }
     }
   }
 })

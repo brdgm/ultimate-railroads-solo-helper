@@ -56,6 +56,7 @@ export interface Turn {
   player: Player
   cardDeck: CardDeckPersistence
   availableTracks: Track[]
+  emilPass?: boolean
 }
 export interface CardDeckPersistence {
   pile: string[]
