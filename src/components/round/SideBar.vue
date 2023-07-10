@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <p>{{t('sideBar.round')}} <strong>{{navigationState.round}}</strong> / 6</p>
+    <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 6</p>
     
     <h5>Player's Tracks</h5>
     <div v-for="(track) of allTracks" :key="track + isAvailable(track)" class="mt-3">
@@ -17,6 +17,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n';
 import getAllEnumValues from 'brdgm-commons/src/util/enum/getAllEnumValues';
 import AppIcon from '../structure/AppIcon.vue';
+import { useStateStore } from '@/store/state';
 
 export default defineComponent({
   name: "SideBar",
@@ -25,7 +26,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n();
-    return { t };
+    const state = useStateStore()
+    return { t, state };
   },
   props: {
     navigationState: {
@@ -34,6 +36,12 @@ export default defineComponent({
     }
   },
   computed: {
+    round() : number {
+      return this.navigationState.round
+    },
+    turn() : number {
+      return this.navigationState.turn
+    },
     allTracks(): Track[] {
       return getAllEnumValues(Track);
     }
@@ -56,7 +64,7 @@ export default defineComponent({
       for (let index=0; index<=availableUpToIndex; index++) {
         newAvailableTracks.push(this.allTracks[index])
       }
-      this.navigationState.turnData.availableTracks = newAvailableTracks
+      this.state.updateTurnAvailableTracks(this.round, this.turn, newAvailableTracks)
     }
   }
 })

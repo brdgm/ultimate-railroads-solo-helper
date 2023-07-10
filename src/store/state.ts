@@ -23,12 +23,14 @@ export const useStateStore = defineStore(`${name}.state`, {
       this.rounds.push(round)
     },
     storeTurn(turn : Turn) {
-      const round = this.rounds.find(item => item.round == turn.round)
-      if (!round) {
-        throw new Error(`Round does not exist: ${turn.round}`)
-      }
+      const round = getRound(this, turn.round)
       round.turns = round.turns.filter(item => item.turn != turn.turn)
       round.turns.push(turn)
+    },
+    updateTurnAvailableTracks(roundNo: number, turnNo: number, availableTracks: Track[]) {
+      const round = getRound(this, roundNo)
+      const turn = getTurn(round, turnNo)
+      turn.availableTracks = availableTracks
     }
   },
   persist: true
@@ -56,4 +58,21 @@ export interface Turn {
 export interface CardDeckPersistence {
   pile: string[]
   discard: string[]
+}
+
+
+function getRound(state: State, roundNo: number) : Round {
+  const round = state.rounds.find(item => item.round == roundNo)
+  if (!round) {
+    throw new Error(`Round does not exist: ${roundNo}`)
+  }
+  return round
+}
+
+function getTurn(round: Round, turnNo: number) : Turn {
+  const turn = round.turns.find(item => item.turn == turnNo)
+  if (!turn) {
+    throw new Error(`Turn does not exist: ${turnNo} in round ${round.round}`)
+  }
+  return turn
 }
