@@ -49,7 +49,9 @@
   "endOfRound": {
     "title": "Ende Runde {round}",
     "scorePoints": "Werte deine Punkte. Emil bekommt keine Punkte.",
-    "returnWorkers": "Setze alle eingesetzten Arbeiter zurück in den jeweiligen Vorrat."
+    "returnWorkers": "Setze alle eingesetzten Arbeiter zurück in den jeweiligen Vorrat.",
+    "returnCoins": "Lege alle eingesetzten Münzen von den Aktionsfeldern zurück in den allgemeinen Vorrat.",
+    "moveEngineers": "Rücke die Ingenieurinnen nach."
   },
   "endOfGame": {
     "title": "Spielende",
@@ -62,7 +64,7 @@
       "title": "Regel-Hinweise",
       "updateAvailableTracks": {
         "title": "Verfügbare Gleisfarben aktualisieren",
-        "rule": "Halte während dines Zuges die verfügbaren Gleisfarben aktuell, wenn du eine neue Gleisfarbe freischaltest. Emil blockiert nur Felder, die für dich auch verfügbar sind, und überspringt alle Karten mit anderen Gleisfarben."
+        "rule": "Halte während deines Zuges die verfügbaren Gleisfarben aktuell, wenn du eine neue Gleisfarbe freischaltest. Emil blockiert nur Felder, die für dich auch verfügbar sind, und überspringt alle Karten mit anderen Gleisfarben."
       },
       "emilBlocked": {
         "title": "Emil ist selbst blockiert",
