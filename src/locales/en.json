@@ -49,7 +49,9 @@
   "endOfRound": {
     "title": "End of Round {round}",
     "scorePoints": "Score your points. Emil does not get any points.",
-    "returnWorkers": "Return all workers to their respective supplies."
+    "returnWorkers": "Return all workers to their respective supplies.",
+    "returnCoins": "Return all coins on action spaces to the general supply.",
+    "moveEngineers": "Move the engineers."
   },
   "endOfGame": {
     "title": "End of Game",

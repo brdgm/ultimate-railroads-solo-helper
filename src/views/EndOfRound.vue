@@ -4,7 +4,11 @@
   <h1>{{t('endOfRound.title', {round})}}</h1>
 
   <p class="mt-4" v-html="t('endOfRound.scorePoints')"></p>
-  <p v-html="t('endOfRound.returnWorkers')"></p>
+  <ul>
+    <li v-html="t('endOfRound.returnWorkers')"></li>
+    <li v-html="t('endOfRound.returnCoins')"></li>
+    <li v-html="t('endOfRound.moveEngineers')"></li>
+  </ul>
 
   <button class="btn btn-success btn-lg mt-4 me-2" @click="next()">
     {{t('action.next')}}
