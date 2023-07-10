@@ -14,15 +14,15 @@
   <template v-else>
     <BotAction :navigationState="navigationState" :key="navigationState.cardDeck.currentCard?.id"/>
 
-    <button class="btn btn-success btn-lg mt-4" @click="next()">
+    <button class="btn btn-success btn-lg mt-4 me-2" @click="next()">
       {{t('turnBot.action.placed')}}
     </button>
 
-    <button class="btn btn-danger btn-lg mt-4 ms-2" @click="notPossible()">
+    <button class="btn btn-danger btn-lg mt-4 me-2" @click="notPossible()">
       {{t('turnBot.action.notPossible')}}
     </button>
 
-    <button class="btn btn-secondary btn-lg mt-4 ms-2" @click="noWorkers()">
+    <button class="btn btn-secondary btn-lg mt-4" @click="noWorkers()">
       {{t('turnBot.action.noWorkers')}}
     </button>
   </template>

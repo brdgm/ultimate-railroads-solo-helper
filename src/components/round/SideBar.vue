@@ -3,7 +3,7 @@
     <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 6</p>
     <button class="btn btn-outline-secondary btn-sm" v-html="t('sideBar.rules.title')" data-bs-toggle="modal" data-bs-target="#rulesModal"></button>
     <h5 class="mt-3">Player's Tracks</h5>
-    <div v-for="(track) of allTracks" :key="track + isAvailable(track)" class="mt-3">
+    <div v-for="(track) of allTracks" :key="track + isAvailable(track)" class="icon-container">
       <AppIcon :type="isAvailable(track) ? 'track' : 'track-unavailable'" :name="track" @click="toggle(track)"
           class="icon" :class="{[track]:true,toggle:isAllowToggle(track)}" />
     </div>
@@ -89,7 +89,12 @@ export default defineComponent({
 <style lang="scss" scoped>
 .sidebar {
   float: right;
-  width: 160px;
+  width: 150px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  @media (max-width: 600px) {
+    width: 100px;
+  }
 }
 .icon {
   width: 45px;
@@ -98,6 +103,14 @@ export default defineComponent({
   }
   &.toggle {
     cursor: pointer;
+  }
+}
+.icon-container {
+  margin-top: 15px;
+  @media (max-width: 600px) {
+    margin-top: 5px;
+    margin-right: 5px;
+    display: inline-block;
   }
 }
 </style>
