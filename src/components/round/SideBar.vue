@@ -1,13 +1,26 @@
 <template>
   <div class="sidebar">
     <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 6</p>
-    
-    <h5>Player's Tracks</h5>
+    <button class="btn btn-outline-secondary btn-sm" v-html="t('sideBar.rules.title')" data-bs-toggle="modal" data-bs-target="#rulesModal"></button>
+    <h5 class="mt-3">Player's Tracks</h5>
     <div v-for="(track) of allTracks" :key="track + isAvailable(track)" class="mt-3">
       <AppIcon :type="isAvailable(track) ? 'track' : 'track-unavailable'" :name="track" @click="toggle(track)"
           class="icon" :class="{[track]:true,toggle:isAllowToggle(track)}" />
     </div>
   </div>
+
+  <ModalDialog id="rulesModal" :title="t('sideBar.rules.title')" :sizeLg="true" :scrollable="true">
+    <template #body>
+      <h6 v-html="t('sideBar.rules.updateAvailableTracks.title')"></h6>
+      <p v-html="t('sideBar.rules.updateAvailableTracks.rule')"></p>
+      <h6 v-html="t('sideBar.rules.emilBlocked.title')"></h6>
+      <p v-html="t('sideBar.rules.emilBlocked.rule')"></p>
+      <h6 v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.title')"></h6>
+      <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.rule')"></p>
+      <h6 v-html="t('sideBar.rules.emilGetsNewToys.title')"></h6>
+      <p v-html="t('sideBar.rules.emilGetsNewToys.rule')"></p>
+    </template>
+  </ModalDialog>
 </template>
 
 <script lang="ts">
@@ -18,12 +31,14 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n';
 import getAllEnumValues from 'brdgm-commons/src/util/enum/getAllEnumValues';
 import AppIcon from '../structure/AppIcon.vue';
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import { useStateStore } from '@/store/state';
 
 export default defineComponent({
   name: "SideBar",
   components: {
-    AppIcon
+    AppIcon,
+    ModalDialog
   },
   setup() {
     const { t } = useI18n();

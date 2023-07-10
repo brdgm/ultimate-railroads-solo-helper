@@ -1,6 +1,7 @@
 <template>
   <div class="mt-4 mb-4">
-    <p v-html="t(`turnBot.placement.${placement}`, {count:workerCount}, workerCount)"></p>
+    <p v-if="card=='use-engineer-light-side'" v-html="t(`turnBot.placement.use-engineer-light-side`)"></p>
+    <p v-else v-html="t(`turnBot.placement.${placement}`, {count:workerCount}, workerCount)"></p>
     <AppIcon v-if="card" type="card" :name="card" extension="jpg"
         class="icon" :class="{[card]:true}"/>
   </div>

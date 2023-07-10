@@ -26,7 +26,8 @@
     "placement": {
       "worker": "Emil places {count} worker: | Emil places {count} workers:",
       "coin": "Emil places 1 coin from the general supply:",
-      "worker-coin": "Emil places 1 worker and 1 coin from the general supply:"
+      "worker-coin": "Emil places 1 worker and 1 coin from the general supply:",
+      "use-engineer-light-side": "Emil places 1 worker on the light engineer on the game board:"
     }
   },
   "turnPlayer": {
@@ -34,7 +35,26 @@
     "turn": "Take your turn."
   },
   "sideBar": {
-    "round": "Round"
+    "round": "Round",
+    "rules": {
+      "title": "Emils Rules",
+      "updateAvailableTracks": {
+        "title": "Update Available Tracks",
+        "rule": "During your turn, always keep the available track colors updated if you unlock a new track color. Emil blocks only spaces you can use, and skips all cards for non-available track colors."
+      },
+      "emilBlocked": {
+        "title": "If Emil is Blocked",
+        "rule": "Sometimes, Emil cannot place workers on the action space he draws, because you have already occupied that space, or because he does not have enough workers left. If this happens, click on XXX."
+      },
+      "emilCollectsLocomtivesEngineers": {
+        "title": "Emil Collects Locomotives and Engineers",
+        "rule": "When Emil takes a locomotive or engineer, place the token in front of him. If there aren’t any locomotives left in the supply, he takes the lowest-numbered factory instead. Locomotives and factories don’t do anything for Emil, he just collects them. The engineers Emil collects count towards engineer majority at the end of the game."
+      },
+      "emilGetsNewToys": {
+        "title": "Emil Gets New Toys",
+        "rule": "As soon as you reach 50 points on the scoring track, give Emil 1 of the 2 workers next to the 50 point space. He has 7 workers from now on. When you reach 150 points, give Emil his last worker. Most of the time, this will happen during scoring phases. If you passes these milestones while placing workers, and before Emil has passed, then he can use the new worker during the current round."
+      }
+    }
   },
   "notfound": {
     "title": "Not Found"

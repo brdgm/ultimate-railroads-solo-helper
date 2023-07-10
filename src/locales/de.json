@@ -26,7 +26,8 @@
     "placement": {
       "worker": "Emil platziert {count} Arbeiter:",
       "coin": "Emil platziert 1 Münze aus dem Vorrat:",
-      "worker-coin": "Emil platziert 1 Arbeiter und 1 Münze aus dem Vorrat:"
+      "worker-coin": "Emil platziert 1 Arbeiter und 1 Münze aus dem Vorrat:",
+      "use-engineer-light-side": "Emil platziert 1 Arbeiter auf dem Feld mit der horizontalen Ingenieurin auf dem Spielplan:"
     }
   },
   "turnPlayer": {
@@ -34,7 +35,26 @@
     "turn": "Führe deinen Zug aus."
   },
   "sideBar": {
-    "round": "Runde"
+    "round": "Runde",
+    "rules": {
+      "title": "Regel-Hinweise",
+      "updateAvailableTracks": {
+        "title": "Verfügbare Gleisfarben aktualisieren",
+        "rule": "Halte während dines Zuges die verfügbaren Gleisfarben aktuell, wenn du eine neue Gleisfarbe freischaltest. Emil blockiert nur Felder, die für dich auch verfügbar sind, und überspringt alle Karten mit anderen Gleisfarben."
+      },
+      "emilBlocked": {
+        "title": "Emil ist selbst blockiert",
+        "rule": "Manchmal kann es passieren, dass Emil das Feld, das die aufgedeckte Karte zeigt, nicht blockieren kann. Entweder, weil er nicht mehr genügend Arbeiter hat oder weil das Feld bereits (von dir) besetzt ist. Wenn dies passiert, klicke auf XXX."
+      },
+      "emilCollectsLocomtivesEngineers": {
+        "title": "Emil sammelt Lokomotiven und Ingenieurinnen",
+        "rule": "Wenn Emil eine Lok nimmt oder eine Ingenieurin anwirbt, legst du das Plättchen zu Emil. Liegen keine Loks mehr in der Auslage, nimmt Emil die Fabrik mit der niedrigsten Zahl. Loks und Fabriken nimmt Emil nur weg, sie haben keine weitere Auswirkung für das Spiel. Die gesammelten Ingenieurinnen dienen nur zur Bestimmung der Mehrheit der Ingenieurinnen bei Spielende."
+      },
+      "emilGetsNewToys": {
+        "title": "Emil bekommt neues Spielzeug",
+        "rule": "Sobald du 50 Punkte erreicht hast, nimmst du 1 der beiden Arbeiter, die neben dem Feld 50 der Zählleiste stehen, und fügst ihn Emils Vorrat hinzu. Emil hat ab sofort 7 Arbeiter. Sobald du 150 Punkte erreicht hast, gibst du Emil den letzten Arbeiter. Meistens wird dies in der Wertung passieren. Solltest du das Feld in der laufenden Runde erreichen und Emil hat noch nicht gepasst, kann er seinen neuen Arbeiter in dieser Runde noch nutzen."
+      }
+    }
   },
   "notfound": {
     "title": "Nicht gefunden"
