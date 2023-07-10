@@ -3,11 +3,29 @@
 
   <h1>{{t('turnBot.title')}}</h1>
 
-  <BotAction :navigationState="navigationState"/>
+  <template v-if="cardDeckEmpty">
+    <p class="mt-4" v-html="t('turnBot.cardDeckEmpty')"></p>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="next()">
-    {{t('action.next')}}
-  </button>
+    <button class="btn btn-success btn-lg mt-4" @click="next()">
+      {{t('action.next')}}
+    </button>
+  </template>
+
+  <template v-else>
+    <BotAction :navigationState="navigationState" :key="cardDeck.currentCard?.id"/>
+
+    <button class="btn btn-success btn-lg mt-4" @click="next()">
+      Placed
+    </button>
+
+    <button class="btn btn-danger btn-lg mt-4 ms-2" @click="notPossible()">
+      Not Possible
+    </button>
+
+    <button class="btn btn-secondary btn-lg mt-4 ms-2" @click="next()">
+      No Workers left
+    </button>
+  </template>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
@@ -22,6 +40,7 @@ import SideBar from '@/components/round/SideBar.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import Player from '@/services/enum/Player'
+import CardDeck from '@/services/CardDeck'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -48,13 +67,23 @@ export default defineComponent({
       else {
         return ''
       }
+    },
+    cardDeck() : CardDeck {
+      return this.navigationState.cardDeck
+    },
+    cardDeckEmpty() : boolean {
+      return this.cardDeck.currentCard == undefined
     }
   },
   methods: {
+    notPossible() : void {
+      this.cardDeck.draw(this.navigationState.turnData.availableTracks)
+      this.$forceUpdate()
+    },
     next() : void {
       const nextRoundNo = this.round
       const nextTurnNo = this.turn + 1
-      const cardDeck = this.navigationState.cardDeck
+      const cardDeck = this.cardDeck
       const nextTurn = { round: nextRoundNo, turn: nextTurnNo, player: Player.PLAYER,
             availableTracks: this.navigationState.turnData.availableTracks,
             cardDeck: cardDeck.toPersistence() }

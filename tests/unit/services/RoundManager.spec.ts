@@ -15,5 +15,6 @@ describe('services/RoundManager', () => {
     expect(turn1.round).to.eq(1)
     expect(turn1.turn).to.eq(1)
     expect(turn1.availableTracks).to.eql([Track.LEVEL1])
+    expect(turn1.cardDeck.currentCard).to.not.undefined
   })
 })

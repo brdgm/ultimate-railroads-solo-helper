@@ -28,7 +28,8 @@
       "coin": "Emil places 1 coin from the general supply:",
       "worker-coin": "Emil places 1 worker and 1 coin from the general supply:",
       "use-engineer-light-side": "Emil places 1 worker on the light engineer on the game board:"
-    }
+    },
+    "cardDeckEmpty": "Emils card deck is exhausted, he passes."
   },
   "turnPlayer": {
     "title": "Player",
@@ -44,7 +45,7 @@
       },
       "emilBlocked": {
         "title": "If Emil is Blocked",
-        "rule": "Sometimes, Emil cannot place workers on the action space he draws, because you have already occupied that space, or because he does not have enough workers left. If this happens, click on XXX."
+        "rule": "Sometimes, Emil cannot place workers on the action space he draws, because you have already occupied that space, or because he does not have enough workers left. If this happens, click on 'Not Possible'."
       },
       "emilCollectsLocomtivesEngineers": {
         "title": "Emil Collects Locomotives and Engineers",

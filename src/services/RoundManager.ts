@@ -24,6 +24,7 @@ export default class RoundManager {
     const player = Player.BOT
     const cardDeck = CardDeck.new(this._modules)
     const availableTracks : Track[] = [Track.LEVEL1]
+    cardDeck.draw(availableTracks)
     const turns : Turn[] = [{ round, turn, player, cardDeck: cardDeck.toPersistence(), availableTracks }]
     return { round, turns }
   }

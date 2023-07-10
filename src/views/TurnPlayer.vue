@@ -5,7 +5,7 @@
 
   <p class="mt-4" v-html="t('turnPlayer.turn')"></p>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="next()">
+  <button class="btn btn-success btn-lg mt-4" @click="next()">
     {{t('action.next')}}
   </button>
 

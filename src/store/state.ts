@@ -59,6 +59,7 @@ export interface Turn {
 }
 export interface CardDeckPersistence {
   pile: string[]
+  currentCard?: string
   discard: string[]
 }
 

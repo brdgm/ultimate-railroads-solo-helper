@@ -8,12 +8,13 @@ describe('services/CardDeck', () => {
     const deck = CardDeck.new([])
 
     expect(deck.pile.length, 'pile size').to.eq(16)
+    expect(deck.currentCard, 'current card').to.undefined
     expect(deck.discard.length, 'discard size').to.eq(0)
 
-    expect(deck.currentCard, 'current card').to.not.undefined
     
     const persistence = deck.toPersistence()
     expect(persistence.pile.length, 'pile size').to.eq(16)
+    expect(persistence.currentCard, 'current card').to.undefined
     expect(persistence.discard.length, 'discard size').to.eq(0)
   })
 
@@ -25,14 +26,14 @@ describe('services/CardDeck', () => {
   })
 
   it('draw', () => {
-    const deck = CardDeck.fromPersistence({pile:['doubler','hire-engineer'],discard:[]})
+    const deck = CardDeck.fromPersistence({pile:['hire-engineer'],currentCard:'doubler',discard:[]})
 
-    expect(deck.pile.length, 'pile size').to.eq(2)
+    expect(deck.pile.length, 'pile size').to.eq(1)
     expect(deck.discard.length, 'discard size').to.eq(0)
     expect(deck.currentCard?.id, 'current card').to.eq('doubler')
 
     expect(deck.draw([Track.LEVEL1])).to.true
-    expect(deck.pile.length, 'pile size').to.eq(1)
+    expect(deck.pile.length, 'pile size').to.eq(0)
     expect(deck.discard.length, 'discard size').to.eq(1)
     expect(deck.currentCard?.id, 'current card').to.eq('hire-engineer')
 
@@ -43,30 +44,29 @@ describe('services/CardDeck', () => {
   })
 
   it('drawUnavailableTrack', () => {
-    const deck = CardDeck.fromPersistence({pile:['doubler',
-        'build-track-level5-1step','build-track-level3-2step','build-track-level2-3step'],
-        discard:[]})
+    const deck = CardDeck.fromPersistence({pile:['build-track-level5-1step','build-track-level3-2step','build-track-level2-3step'],
+        currentCard:'doubler', discard:[]})
 
-    expect(deck.pile.length, 'pile size').to.eq(4)
+    expect(deck.pile.length, 'pile size').to.eq(3)
     expect(deck.discard.length, 'discard size').to.eq(0)
     expect(deck.currentCard?.id, 'current card').to.eq('doubler')
 
     expect(deck.draw([Track.LEVEL1,Track.LEVEL2])).to.true
-    expect(deck.pile.length, 'pile size').to.eq(1)
+    expect(deck.pile.length, 'pile size').to.eq(0)
     expect(deck.discard.length, 'discard size').to.eq(3)
     expect(deck.currentCard?.id, 'current card').to.eq('build-track-level2-3step')
   })
 
   it('prepareForNewRound', () => {
-    const deck = CardDeck.fromPersistence({pile:['doubler'],discard:['hire-engineer','industry-1step']})
+    const deck = CardDeck.fromPersistence({pile:['doubler'],currentCard:'industry-2step',discard:['hire-engineer','industry-1step']})
 
     expect(deck.pile.length, 'pile size').to.eq(1)
     expect(deck.discard.length, 'discard size').to.eq(2)
 
     deck.prepareForNewRound()
 
-    expect(deck.pile.length, 'pile size').to.eq(3)
+    expect(deck.pile.length, 'pile size').to.eq(4)
     expect(deck.discard.length, 'discard size').to.eq(0)
-    expect(deck.currentCard?.id, 'current card').to.not.undefined
+    expect(deck.currentCard?.id, 'current card').to.undefined
   })
 })

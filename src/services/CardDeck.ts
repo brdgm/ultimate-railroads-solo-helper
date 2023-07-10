@@ -8,15 +8,17 @@ import Track from './enum/Track'
 export default class CardDeck {
 
   private _pile : Card[]
+  private _currentCard : Card|undefined
   private _discard : Card[]
 
-  public constructor(pile : Card[], discard : Card[]) {
+  public constructor(pile : Card[], currentCard: Card|undefined, discard : Card[]) {
     this._pile = pile
+    this._currentCard = currentCard
     this._discard = discard
   }
 
   public get currentCard() : Card|undefined {
-    return this._pile[0]
+    return this._currentCard
   }
 
   public get pile() : readonly Card[] {
@@ -34,16 +36,16 @@ export default class CardDeck {
    * @returns true if a new card was drawn
    */
   public draw(availableTracks: Track[]) : boolean {
-    const discardCard = this._pile.shift()
-    if (discardCard) {
-      this._discard.push(discardCard)
+    if (this.currentCard) {
+      this._discard.push(this.currentCard)
     }
+    this._currentCard = this._pile.shift()
 
     if (this.currentCard && this.currentCard.track && !availableTracks.includes(this.currentCard.track)) {
       return this.draw(availableTracks)
     }
     else {
-      return this._pile.length > 0
+      return this._currentCard != undefined
     }
   }
 
@@ -51,6 +53,10 @@ export default class CardDeck {
    * Prepares the card deck for a new round: Add back all discarded cards and shuffle.
    */
   public prepareForNewRound() : void {
+    if (this._currentCard) {
+      this._pile.push(this._currentCard)
+      this._currentCard = undefined
+    }
     this._pile.push(...this._discard)
     this._discard = []
     this._pile = _.shuffle(this._pile)
@@ -62,6 +68,7 @@ export default class CardDeck {
   public toPersistence() : CardDeckPersistence {
     return {
       pile: this._pile.map(card => card.id),
+      currentCard: this._currentCard?.id,
       discard: this._discard.map(card => card.id)
     }
   }
@@ -72,7 +79,7 @@ export default class CardDeck {
    */
   public static new(modules: Module[]) : CardDeck {
     const pile = _.shuffle(Cards.getAll(modules))
-    return new CardDeck(pile, [])
+    return new CardDeck(pile, undefined, [])
   }
 
   /**
@@ -81,6 +88,7 @@ export default class CardDeck {
   public static fromPersistence(persistence : CardDeckPersistence) : CardDeck {
     return new CardDeck(
       persistence.pile.map(Cards.get),
+      persistence.currentCard ? Cards.get(persistence.currentCard) : undefined,
       persistence.discard.map(Cards.get)
     )
   }
