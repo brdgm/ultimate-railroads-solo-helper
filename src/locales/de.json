@@ -60,6 +60,7 @@
   },
   "sideBar": {
     "round": "Runde",
+    "tracks": "Spieler-Gleise",
     "rules": {
       "title": "Regel-Hinweise",
       "updateAvailableTracks": {

@@ -60,6 +60,7 @@
   },
   "sideBar": {
     "round": "Round",
+    "tracks": "Player's Tracks",
     "rules": {
       "title": "Emils Rules",
       "updateAvailableTracks": {
