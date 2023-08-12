@@ -32,4 +32,24 @@ describe('services/RoundManager', () => {
     expect(turn1.availableTracks).to.eql([Track.LEVEL1,Track.LEVEL2])
     expect(turn1.cardDeck.currentCard).to.not.undefined
   })
+
+  it('getNumberOfRounds', () => {
+    const roundManager = new RoundManager(mockState())
+    expect(roundManager.getNumberOfRounds()).to.eq(6)
+  })
+
+  it('getNumberOfRounds_coal', () => {
+    const roundManager = new RoundManager(mockState({modules:[Module.COAL]}))
+    expect(roundManager.getNumberOfRounds()).to.eq(5)
+  })
+
+  it('getNumberOfRounds_manufactory-train', () => {
+    const roundManager = new RoundManager(mockState({modules:[Module.MANUFACTORY_TRAIN]}))
+    expect(roundManager.getNumberOfRounds()).to.eq(5)
+  })
+
+  it('getNumberOfRounds_coal_manufactory-train', () => {
+    const roundManager = new RoundManager(mockState({modules:[Module.COAL,Module.MANUFACTORY_TRAIN]}))
+    expect(roundManager.getNumberOfRounds()).to.eq(5)
+  })
 })

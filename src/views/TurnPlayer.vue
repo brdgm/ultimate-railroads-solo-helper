@@ -81,7 +81,7 @@ export default defineComponent({
       this.$router.push(`/round/${nextRoundNo}/turn/${nextTurnNo}/bot`)
     },
     endRound() : void {
-      if (this.round == 6) {
+      if (this.round == this.navigationState.numberOfRounds) {
         this.$router.push(`/round/${this.round}/turn/${this.turn}/endOfGame`)
       }
       else {

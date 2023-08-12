@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 6</p>
+    <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / {{navigationState.numberOfRounds}}</p>
     <button class="btn btn-outline-secondary btn-sm" v-html="t('sideBar.rules.title')" data-bs-toggle="modal" data-bs-target="#rulesModal"></button>
     <h5 class="mt-3" v-html="t('sideBar.tracks')"></h5>
     <div v-for="(track) of allTracks" :key="track + isAvailable(track)" class="icon-container">

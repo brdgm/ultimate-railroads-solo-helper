@@ -44,4 +44,14 @@ export default class RoundManager {
     return { round, turns }
   }
 
+  /**
+   * @returns Number of rounds depending on module selection
+   */
+  public getNumberOfRounds() : number {
+    if (this._modules.includes(Module.COAL) || this._modules.includes(Module.MANUFACTORY_TRAIN)) {
+      return 5
+    }
+    return 6
+  }
+
 }

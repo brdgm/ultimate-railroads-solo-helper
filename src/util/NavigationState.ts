@@ -1,4 +1,5 @@
 import CardDeck from '@/services/CardDeck'
+import RoundManager from '@/services/RoundManager'
 import Player from '@/services/enum/Player'
 import Track from '@/services/enum/Track'
 import { Round, State, Turn } from '@/store/state'
@@ -12,6 +13,7 @@ export default class NavigationState {
   readonly turnData : Turn
   readonly cardDeck: CardDeck
   readonly lastTurnLastRound? : number
+  readonly numberOfRounds : number
 
   public constructor(route : RouteLocation, state: State) {    
     this.round = parseInt(route.params['round'] as string)
@@ -24,6 +26,8 @@ export default class NavigationState {
     if (this.round > 1) {
       this.lastTurnLastRound = getLastTurn(this.round - 1, state.rounds)?.turn
     }
+
+    this.numberOfRounds = new RoundManager(state).getNumberOfRounds()
   }
 
 }
