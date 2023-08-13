@@ -7,5 +7,6 @@ export default interface Card {
   placement: Placement
   workerCount: number
   track?: Track
-  modules?: Module[]  
+  locomotiveFactory?: boolean
+  modules?: Module[]
 }

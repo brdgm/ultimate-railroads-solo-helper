@@ -2,7 +2,7 @@
  * Module
  */
 enum Module {
-  COAL = 'gain-seal-stone',
+  COAL = 'coal',
   MANUFACTORY_TRAIN = 'manufactory-train'
 }
 export default Module

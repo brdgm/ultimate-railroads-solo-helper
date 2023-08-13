@@ -5,8 +5,8 @@ import Placement from './enum/Placement';
 import Track from './enum/Track';
 
 const cards = [
-  { id: 'build-locomotive-and-factory', placement: Placement.WORKER, workerCount: 3 },
-  { id: 'build-locomotive-or-factory', placement: Placement.WORKER, workerCount: 1 },
+  { id: 'build-locomotive-and-factory', placement: Placement.WORKER, workerCount: 3, locomotiveFactory: true },
+  { id: 'build-locomotive-or-factory', placement: Placement.WORKER, workerCount: 1, locomotiveFactory: true },
   { id: 'build-track-level1-3step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL1 },
   { id: 'build-track-level2-3step', placement: Placement.WORKER, workerCount: 2, track: Track.LEVEL2 },
   { id: 'build-track-level3-1step', placement: Placement.WORKER, workerCount: 1, track: Track.LEVEL3 },

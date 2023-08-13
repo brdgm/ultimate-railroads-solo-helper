@@ -17,6 +17,10 @@
       <span v-html="t('setup.board.placeWorkers50points')"></span><br/>
       <img src="@/assets/setup/workers-50-points.jpg" class="workers-50-points"/>
     </li>
+    <li>
+      <img src="@/assets/module/american-railroads.png" class="icon"/>
+      <span v-html="t('setup.board.americaStockPriceTile')"></span><br/>
+    </li>
   </ol>
 </template>
 
@@ -28,8 +32,8 @@ export default defineComponent({
   name: 'BoardSetup',
   setup() {
     const { t } = useI18n()
-    return { t, }
-  },
+    return { t }
+  }
 })
 </script>
 
@@ -47,6 +51,10 @@ img {
   }
   &.workers-50-points {
     width: 100px;
+  }
+  &.icon {
+    height: 2rem;
+    margin-right: 0.25rem;
   }
 }
 li {

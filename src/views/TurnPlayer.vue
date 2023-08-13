@@ -69,8 +69,11 @@ export default defineComponent({
       const nextRoundNo = this.round
       const nextTurnNo = this.turn + 1
       const cardDeck = this.navigationState.cardDeck
-      const emilPass = this.emilPass
-      if (!emilPass) {
+      let emilPass = this.emilPass
+      if (emilPass) {
+        emilPass = false
+      }
+      else {
         cardDeck.draw(this.navigationState.turnData.availableTracks)
       }
       const nextTurn = { round: nextRoundNo, turn: nextTurnNo, player: Player.BOT,
@@ -81,7 +84,7 @@ export default defineComponent({
       this.$router.push(`/round/${nextRoundNo}/turn/${nextTurnNo}/bot`)
     },
     endRound() : void {
-      if (this.round == 6) {
+      if (this.round == this.navigationState.numberOfRounds) {
         this.$router.push(`/round/${this.round}/turn/${this.turn}/endOfGame`)
       }
       else {

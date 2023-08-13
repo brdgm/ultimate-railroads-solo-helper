@@ -1,8 +1,8 @@
 <template>
   <div class="sidebar">
-    <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 6</p>
+    <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / {{navigationState.numberOfRounds}}</p>
     <button class="btn btn-outline-secondary btn-sm" v-html="t('sideBar.rules.title')" data-bs-toggle="modal" data-bs-target="#rulesModal"></button>
-    <h5 class="mt-3">Player's Tracks</h5>
+    <h6 class="mt-3" v-html="t('sideBar.tracks')"></h6>
     <div v-for="(track) of allTracks" :key="track + isAvailable(track)" class="icon-container">
       <AppIcon :type="isAvailable(track) ? 'track' : 'track-unavailable'" :name="track" @click="toggle(track)"
           class="icon" :class="{[track]:true,toggle:isAllowToggle(track)}" />
@@ -17,6 +17,8 @@
       <p v-html="t('sideBar.rules.emilBlocked.rule')"></p>
       <h6 v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.title')"></h6>
       <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.rule')"></p>
+      <img src="@/assets/module/asian-railroads.png" class="module-icon"/>
+      <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.industryBoard')"></p>
       <h6 v-html="t('sideBar.rules.emilGetsNewToys.title')"></h6>
       <p v-html="t('sideBar.rules.emilGetsNewToys.rule')"></p>
     </template>
@@ -111,6 +113,13 @@ export default defineComponent({
     margin-top: 5px;
     margin-right: 5px;
     display: inline-block;
+  }
+}
+#rulesModal {
+  .module-icon {
+    float: left;
+    height: 1.25rem;
+    margin-right: 0.25rem;
   }
 }
 </style>
