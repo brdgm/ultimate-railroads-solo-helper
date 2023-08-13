@@ -13,7 +13,8 @@
       "block2CoinsActionSpace": "Place a blockade on the <b>2 coins action space</b>. This action space is not available.",
       "unusedComponents": "Set the last round token, the turn order cards, and the starting bonus cards aside. You also do not need the turn order pawns, because turn order is not used in this variant.",
       "take5Coins": "Take <b>5 coins</b>.",
-      "placeWorkers50points": "Give Emil <b>6 workers</b> in the color of your choice. Place his other 2 workers next to space 50 of the scoring track. Emil does not use any other components."
+      "placeWorkers50points": "Give Emil <b>6 workers</b> in the color of your choice. Place his other 2 workers next to space 50 of the scoring track. Emil does not use any other components.",
+      "americaStockPriceTile": "<i>If American Railroads</i>: During setup, place Emil’s stock price tile on the far left of level 3."
     },
     "modules": {
       "title": "Enable Modules",
@@ -30,6 +31,7 @@
       "use-engineer-light-side": "Emil places 1 worker on the light engineer on the game board:"
     },
     "cardDeckEmpty": "Emils card deck is exhausted, he passes.",
+    "locomotiveFactoryRules": "See <b>Emils Rules</b> for details.",
     "action": {
       "placed": "Placed",
       "notPossible": "Not Possible",
@@ -73,7 +75,8 @@
       },
       "emilCollectsLocomtivesEngineers": {
         "title": "Emil Collects Locomotives and Engineers",
-        "rule": "When Emil takes a locomotive or engineer, place the token in front of him. If there aren’t any locomotives left in the supply, he takes the lowest-numbered factory instead. Locomotives and factories don’t do anything for Emil, he just collects them. The engineers Emil collects count towards engineer majority at the end of the game."
+        "rule": "When Emil takes a locomotive or engineer, place the token in front of him. If there aren’t any locomotives left in the supply, he takes the lowest-numbered factory instead. Locomotives and factories don’t do anything for Emil, he just collects them. The engineers Emil collects count towards engineer majority at the end of the game.",
+        "industryBoard": "<i>Industry Board</i>: When Emil blocks a locomotive or factory action space, he always builds a factory. He always builds in the first legally available space in counterclockwise direction (i.e. the order you reach factories when moving on the track)."
       },
       "emilGetsNewToys": {
         "title": "Emil Gets New Toys",

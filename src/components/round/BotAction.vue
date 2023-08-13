@@ -1,9 +1,11 @@
 <template>
   <div class="mt-4 mb-4">
-    <p v-if="card=='use-engineer-light-side'" v-html="t(`turnBot.placement.use-engineer-light-side`)"></p>
+    <p v-if="card=='use-engineer-light-side'" v-html="t('turnBot.placement.use-engineer-light-side')"></p>
     <p v-else v-html="t(`turnBot.placement.${placement}`, {count:workerCount}, workerCount)"></p>
     <AppIcon v-if="card" type="card" :name="card" extension="jpg"
         class="icon" :class="{[card]:true}"/>
+    <p v-if="locomotiveFactory" class="locomotiveFactory mt-3" v-html="t('turnBot.locomotiveFactoryRules')"
+        data-bs-toggle="modal" data-bs-target="#rulesModal"></p>
   </div>
 </template>
 
@@ -38,6 +40,9 @@ export default defineComponent({
     },
     workerCount() : number {
       return this.navigationState.cardDeck.currentCard?.workerCount ?? 1
+    },
+    locomotiveFactory() : boolean {
+      return this.navigationState.cardDeck.currentCard?.locomotiveFactory ?? false
     }
   }
 })
@@ -58,6 +63,12 @@ export default defineComponent({
   }
   &.module-coal {
     height: 220px;
+  }
+}
+.locomotiveFactory {
+  cursor: pointer;
+  :deep(b) {
+    text-decoration: underline dotted;
   }
 }
 </style>

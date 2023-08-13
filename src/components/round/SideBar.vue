@@ -17,6 +17,8 @@
       <p v-html="t('sideBar.rules.emilBlocked.rule')"></p>
       <h6 v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.title')"></h6>
       <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.rule')"></p>
+      <img src="@/assets/module/asian-railroads.png" class="module-icon"/>
+      <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.industryBoard')"></p>
       <h6 v-html="t('sideBar.rules.emilGetsNewToys.title')"></h6>
       <p v-html="t('sideBar.rules.emilGetsNewToys.rule')"></p>
     </template>
@@ -111,6 +113,13 @@ export default defineComponent({
     margin-top: 5px;
     margin-right: 5px;
     display: inline-block;
+  }
+}
+#rulesModal {
+  .module-icon {
+    float: left;
+    height: 1.25rem;
+    margin-right: 0.25rem;
   }
 }
 </style>

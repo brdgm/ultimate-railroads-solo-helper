@@ -13,7 +13,8 @@
       "block2CoinsActionSpace": "Decke das <b>Aktionsfeld 2 Münzen</b> mit dem Abdeckkreuz ab. Dieses Feld steht hier nicht zur Verfügung.",
       "unusedComponents": "Das Letzte-Runde-Plättchen, die Reihenfolgekarten und die Startbonuskarten benötigst du nicht. Auch die Büste für die Zugreihenfolge benötigst du nicht. Die Reihenfolgeleiste hat in dieser Variante keine Bedeutung.",
       "take5Coins": "Du nimmst dir <b>5 Münzen</b>.",
-      "placeWorkers50points": "Emil bekommt zunächst nur <b>6 seiner Arbeiter</b> (in einer beliebigen Farbe). Seine 2 anderen Arbeiter stellst du neben das Feld 50 der Zählleiste. Emil benötigt kein weiteres Material."
+      "placeWorkers50points": "Emil bekommt zunächst nur <b>6 seiner Arbeiter</b> (in einer beliebigen Farbe). Seine 2 anderen Arbeiter stellst du neben das Feld 50 der Zählleiste. Emil benötigt kein weiteres Material.",
+      "americaStockPriceTile": "<i>Bei American Railroads</i>: Emil setzt bei Spielaufbau seinen Kursmarker auf die linke Seite der Stufe 3 des Aktientableaus."
     },
     "modules": {
       "title": "Module aktivieren",
@@ -30,6 +31,7 @@
       "use-engineer-light-side": "Emil platziert 1 Arbeiter auf dem Feld mit der horizontalen Ingenieurin auf dem Spielplan:"
     },
     "cardDeckEmpty": "Emils Stapel ist leer, er passt.",
+    "locomotiveFactoryRules": "Siehe <b>Regel-Hinweise</b>.",
     "action": {
       "placed": "Platziert",
       "notPossible": "Nicht möglich",
@@ -73,7 +75,8 @@
       },
       "emilCollectsLocomtivesEngineers": {
         "title": "Emil sammelt Lokomotiven und Ingenieurinnen",
-        "rule": "Wenn Emil eine Lok nimmt oder eine Ingenieurin anwirbt, legst du das Plättchen zu Emil. Liegen keine Loks mehr in der Auslage, nimmt Emil die Fabrik mit der niedrigsten Zahl. Loks und Fabriken nimmt Emil nur weg, sie haben keine weitere Auswirkung für das Spiel. Die gesammelten Ingenieurinnen dienen nur zur Bestimmung der Mehrheit der Ingenieurinnen bei Spielende."
+        "rule": "Wenn Emil eine Lok nimmt oder eine Ingenieurin anwirbt, legst du das Plättchen zu Emil. Liegen keine Loks mehr in der Auslage, nimmt Emil die Fabrik mit der niedrigsten Zahl. Loks und Fabriken nimmt Emil nur weg, sie haben keine weitere Auswirkung für das Spiel. Die gesammelten Ingenieurinnen dienen nur zur Bestimmung der Mehrheit der Ingenieurinnen bei Spielende.",
+        "industryBoard": "<i>Industrietableau</i>: Besetzt Emil ein Lok- und/oder Fabrik-Feld, baut er immer eine Fabrik. Er baut diese immer auf den ersten, möglichen Platz (den auch die Spieler*in bebauen könnte) gegen den Uhrzeigersinn (also so wie du auf der Leiste vorwärts ziehst). Emil setzt keine Wartungswagen ein."
       },
       "emilGetsNewToys": {
         "title": "Emil bekommt neues Spielzeug",
