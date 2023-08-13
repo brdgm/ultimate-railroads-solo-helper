@@ -60,7 +60,7 @@
   },
   "sideBar": {
     "round": "Runde",
-    "tracks": "Spieler-Gleise",
+    "tracks": "Verfügbare Gleisfarben",
     "rules": {
       "title": "Regel-Hinweise",
       "updateAvailableTracks": {
