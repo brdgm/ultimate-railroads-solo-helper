@@ -68,7 +68,8 @@ export default defineComponent({
 .locomotiveFactory {
   cursor: pointer;
   :deep(b) {
-    text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration-style: dotted;
   }
 }
 </style>
