@@ -6,7 +6,7 @@
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="moduleCoal" :checked="hasCoalModule" @input="toggleCoalModule">
         <label class="form-check-label" for="moduleCoal">
-          <img src="@/assets/module/coal.png" class="icon"/>
+          <img src="@/assets/module/coal.png" class="icon" alt=""/>
           {{t('setup.modules.coal')}}
         </label>
       </div>
@@ -17,7 +17,7 @@
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="moduleManufactoryTrain" :checked="hasManufactoryTrainModule" @input="toggleManufactoryTrainModule">
         <label class="form-check-label" for="moduleManufactoryTrain">
-          <img src="@/assets/module/manufactory-train.png" class="icon"/>
+          <img src="@/assets/module/manufactory-train.png" class="icon" alt=""/>
           {{t('setup.modules.manufactory-train')}}
         </label>
       </div>

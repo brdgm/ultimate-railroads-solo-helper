@@ -6,7 +6,7 @@ export default function (params?: MockStateParams) : State {
     language: 'en',
     baseFontSize: 1,
     setup: {
-      modules: params?.modules || []
+      modules: params?.modules ?? []
     },
     rounds: params?.rounds ?? []
   }

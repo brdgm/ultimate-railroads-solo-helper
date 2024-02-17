@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 game-image">
     <a href="https://boardgamegeek.com/boardgame/329591/ultimate-railroads" target="_blank" rel="noopener">
-      <img src="../assets/game-ultimate-railroads.webp" class="rounded shadow w-100"/>
+      <img src="../assets/game-ultimate-railroads.webp" class="rounded shadow w-100" alt=""/>
     </a>
   </div>
 
@@ -23,7 +23,7 @@
     This is not an official Hans im Glück product and has no affiliation with <a href="https://www.hans-im-glueck.de/" target="_blank" rel="noopener">Hans im Glück</a>.
     All art in this app is from <a href="https://boardgamegeek.com/boardgame/329591/ultimate-railroads" target="_blank" rel="noopener">Ultimate Railroads</a>.
     See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
-    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png"/></a>
+    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png" alt="Support me on Ko-fi"/></a>
   </p>
 
 </template>

@@ -17,7 +17,7 @@
       <p v-html="t('sideBar.rules.emilBlocked.rule')"></p>
       <h6 v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.title')"></h6>
       <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.rule')"></p>
-      <img src="@/assets/module/asian-railroads.png" class="module-icon"/>
+      <img src="@/assets/module/asian-railroads.png" class="module-icon" alt=""/>
       <p v-html="t('sideBar.rules.emilCollectsLocomtivesEngineers.industryBoard')"></p>
       <h6 v-html="t('sideBar.rules.emilGetsNewToys.title')"></h6>
       <p v-html="t('sideBar.rules.emilGetsNewToys.rule')"></p>

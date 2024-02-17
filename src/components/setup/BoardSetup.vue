@@ -3,22 +3,22 @@
   <ol>
     <li>
       <span v-html="t('setup.board.block2CoinsActionSpace')"></span><br/>
-      <img src="@/assets/setup/block-2coins-action-space.jpg" class="block-2coins-action-space"/>
+      <img src="@/assets/setup/block-2coins-action-space.jpg" class="block-2coins-action-space" alt=""/>
     </li>
     <li>
       <span v-html="t('setup.board.unusedComponents')"></span><br/>
-      <img src="@/assets/setup/unused-material.jpg" class="unused-material"/>
+      <img src="@/assets/setup/unused-material.jpg" class="unused-material" alt=""/>
     </li>
     <li>
       <span v-html="t('setup.board.take5Coins')"></span><br/>
-      <img src="@/assets/setup/take-5-coins.jpg" class="take-5-coins"/>
+      <img src="@/assets/setup/take-5-coins.jpg" class="take-5-coins" alt=""/>
     </li>
     <li>
       <span v-html="t('setup.board.placeWorkers50points')"></span><br/>
-      <img src="@/assets/setup/workers-50-points.jpg" class="workers-50-points"/>
+      <img src="@/assets/setup/workers-50-points.jpg" class="workers-50-points" alt=""/>
     </li>
     <li>
-      <img src="@/assets/module/american-railroads.png" class="icon"/>
+      <img src="@/assets/module/american-railroads.png" class="icon" alt=""/>
       <span v-html="t('setup.board.americaStockPriceTile')"></span><br/>
     </li>
   </ol>
