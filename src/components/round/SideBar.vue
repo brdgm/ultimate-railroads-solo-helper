@@ -26,15 +26,15 @@
 </template>
 
 <script lang="ts">
-import Player from '@/services/enum/Player';
-import Track from '@/services/enum/Track';
-import NavigationState from '@/util/NavigationState';
+import Player from '@/services/enum/Player'
+import Track from '@/services/enum/Track'
+import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n';
-import getAllEnumValues from 'brdgm-commons/src/util/enum/getAllEnumValues';
-import AppIcon from '../structure/AppIcon.vue';
+import { useI18n } from 'vue-i18n'
+import getAllEnumValues from 'brdgm-commons/src/util/enum/getAllEnumValues'
+import AppIcon from '../structure/AppIcon.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
-import { useStateStore } from '@/store/state';
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: "SideBar",

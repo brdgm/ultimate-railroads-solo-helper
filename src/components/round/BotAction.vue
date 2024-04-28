@@ -10,11 +10,11 @@
 </template>
 
 <script lang="ts">
-import Placement from '@/services/enum/Placement';
-import AppIcon from '../structure/AppIcon.vue';
-import NavigationState from '@/util/NavigationState';
+import Placement from '@/services/enum/Placement'
+import AppIcon from '../structure/AppIcon.vue'
+import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: "BotAction",
