@@ -43,9 +43,9 @@ export default defineComponent({
     ModalDialog
   },
   setup() {
-    const { t } = useI18n();
+    const { t } = useI18n()
     const state = useStateStore()
-    return { t, state };
+    return { t, state }
   },
   props: {
     navigationState: {
@@ -61,7 +61,7 @@ export default defineComponent({
       return this.navigationState.turn
     },
     allTracks(): Track[] {
-      return getAllEnumValues(Track);
+      return getAllEnumValues(Track)
     }
   },
   methods: {

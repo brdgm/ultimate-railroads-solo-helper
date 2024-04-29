@@ -1,8 +1,8 @@
-import { Round, State, Turn } from "@/store/state"
-import Module from "./enum/Module"
-import CardDeck from "./CardDeck"
-import Track from "./enum/Track"
-import Player from "./enum/Player"
+import { Round, State, Turn } from '@/store/state'
+import Module from './enum/Module'
+import CardDeck from './CardDeck'
+import Track from './enum/Track'
+import Player from './enum/Player'
 
 export default class RoundManager {
 
