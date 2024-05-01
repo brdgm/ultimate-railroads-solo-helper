@@ -31,9 +31,9 @@ import Track from '@/services/enum/Track'
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import getAllEnumValues from 'brdgm-commons/src/util/enum/getAllEnumValues'
+import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
 import AppIcon from '../structure/AppIcon.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import { useStateStore } from '@/store/state'
 
 export default defineComponent({
