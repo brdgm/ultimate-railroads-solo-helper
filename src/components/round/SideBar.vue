@@ -37,7 +37,7 @@ import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDial
 import { useStateStore } from '@/store/state'
 
 export default defineComponent({
-  name: "SideBar",
+  name: 'SideBar',
   components: {
     AppIcon,
     ModalDialog
