@@ -1,8 +1,8 @@
-import findMandatory from 'brdgm-commons/src/util/map/findMandatory';
-import Card from './Card';
-import Module from './enum/Module';
-import Placement from './enum/Placement';
-import Track from './enum/Track';
+import findMandatory from '@brdgm/brdgm-commons/src/util/map/findMandatory'
+import Card from './Card'
+import Module from './enum/Module'
+import Placement from './enum/Placement'
+import Track from './enum/Track'
 
 const cards = [
   { id: 'build-locomotive-and-factory', placement: Placement.WORKER, workerCount: 3, locomotiveFactory: true },

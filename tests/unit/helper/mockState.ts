@@ -1,5 +1,5 @@
-import Module from '@/services/enum/Module';
-import { Round, State } from '@/store/state';
+import Module from '@/services/enum/Module'
+import { Round, State } from '@/store/state'
 
 export default function (params?: MockStateParams) : State {  
   return {
