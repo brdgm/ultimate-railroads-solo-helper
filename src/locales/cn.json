@@ -1,0 +1,111 @@
+{
+  "gameTitle": "终极铁路",
+  "home": {
+    "title": "终极铁路单人助手",
+    "play1": "与艾米尔对战, 他是<a href='https://boardgamegeek.com/boardgame/329591/ultimate-railroads' target='_blank' rel='noopener'><b>终极铁路</b></a>的单人模式对手。",
+    "play2": "本辅助应用替代牌组并提供游戏内帮助。挑战自己的最高分！",
+    "feedback": "讨论与反馈:"
+  },
+  "setup": {
+    "title": "游戏设置",
+    "board": {
+      "title": "单人变体设置",
+      "block2CoinsActionSpace": "将<b>2枚钱币</b>的行动格用<b>覆盖版</b>遮住。单人游戏不使用此格。",
+      "unusedComponents": "不需要最终轮片, 顺位牌和起始奖励牌。也不需要标示顺位的半身像, 顺位区在2人游戏中没有意义。",
+      "take5Coins": "你拿取<b>5枚钱币</b>。",
+      "placeWorkers50points": "艾米尔在开始时只有<b>6个工人</b>(任选一个颜色), 将他的另外2个工人放在分数轨的50分旁。艾米尔不需要其他配件。",
+      "americaStockPriceTile": "<i>如果美国路线板</i>: 游戏设置时, 将艾米尔的股票标记放在股市板第3格 (由下往上数) 的最左边。"
+    },
+    "modules": {
+      "title": "启用模组",
+      "coal": "煤炭模组",
+      "manufactory-train": "工程火车模组"
+    }
+  },
+  "turnBot": {
+    "title": "艾米尔",
+    "placement": {
+      "worker": "艾米尔放置{count}个工人: | 艾米尔放置{count}个工人:",
+      "coin": "艾米尔从公共供应区放置1枚钱币:",
+      "worker-coin": "艾米尔放置1个工人, 和从公共供应区放置1枚钱币:",
+      "use-engineer-light-side": "艾米尔在版图上的横置的工程师上放置1个工人:"
+    },
+    "cardDeckEmpty": "艾米尔没有牌可以翻开, 他跳过。",
+    "locomotiveFactoryRules": "详情参阅<b>艾米尔规则</b>。",
+    "action": {
+      "placed": "已放置",
+      "notPossible": "不可行",
+      "noWorkers": "无工人"
+    }
+  },
+  "turnPlayer": {
+    "title": "玩家",
+    "turn": "进行你的回合。",
+    "turnEmilPass1": "艾米尔已跳过, 继续你的剩余回合。",
+    "turnEmilPass2": "若艾米尔在你的回合中获得新工人, 点击<i>下一步</i>。",
+    "turnEmilDeckExhausted": "艾米尔没有牌可以翻开, 继续你的剩余回合。",
+    "action": {
+      "endRound": "结束第{round}轮"
+    }
+  },
+  "endOfRound": {
+    "title": "第{round}轮结束",
+    "scorePoints": "计算你的得分。艾米尔不得分。",
+    "returnWorkers": "将所有的工人返回各自的个人供应区。",
+    "returnCoins": "将行动格上的钱币返还公共供应区。",
+    "moveEngineers": "移动工程师。"
+  },
+  "endOfGame": {
+    "title": "游戏结束",
+    "scorePoints": "计算你的总分, 包含游戏结束牌和工程师奖励",
+    "engineerMajority": "比较你与米尔收集的工程师数量, 以确定谁拥有最多的工程师。"
+  },
+  "sideBar": {
+    "round": "轮次",
+    "tracks": "可用轨道",
+    "rules": {
+      "title": "艾米尔规则",
+      "updateAvailableTracks": {
+        "title": "更新可用轨道",
+        "rule": "在你的回合中, 若解锁新的轨道颜色, 请及时更新可用轨道。艾米尔只会占据你可用的行动格, 并跳过所有不可用轨道颜色的卡牌。"
+      },
+      "emilBlocked": {
+        "title": "艾米尔会卡住自己",
+        "rule": "有时会发生这种情况: 艾米尔无法占据翻开纸牌上所示的行动格, 可能因为他没有足够的工人, 或者因为这个行动格已经被（你）占据, 此时请点击<i>不可行</i>。"
+      },
+      "emilCollectsLocomtivesEngineers": {
+        "title": "艾米尔收集火车头和工程师",
+        "rule": "当艾米尔拿取一个火车头或者聘用一名工程师时, 你将对应的配件放在艾米尔旁。如果供应区中没有火车头, 艾米尔拿取数字最低的工厂。艾米尔仅占据这些火车头和工厂, 它们在游戏中不再带来其它效果。他收集的工程师, 仅在游戏结束时, 比较谁拥有较多工程师时发挥作用。",
+        "industryBoard": "<i>工业板</i>: 如果艾米尔占据了一个火车头和/或工厂行动格, 他总会建造工厂。他总是在逆时针数起(沿着你在工业轨上移动的方向)第一个可能的位置(玩家也可以建造的位置)建造该工厂。"
+      },
+      "emilGetsNewToys": {
+        "title": "艾米尔拿到了新玩具",
+        "rule": "当你达到50分时, 你拿取分数轨50分旁的两个工人之一, 加入艾米尔的供应区。艾米尔现在有7个工人。当你达到150分时, 将艾米尔在分数轨旁的另一个工人给他。大多数情况下, 这会发生在计分时, 如果发生在一轮当中, 且艾米尔还没有跳过, 他在该轮中就可以使用他的新工人。"
+      }
+    }
+  },
+  "notfound": {
+    "title": "未找到"
+  },
+  "action": {
+    "playGame": "进行游戏",
+    "startGame": "开始游戏",
+    "next": "下一步",
+    "nextRound": "下一轮",
+    "abortGame": "终止游戏",
+    "abortGameConfirm": "你确定要终止正在进行的游戏吗？",
+    "endGame": "结束游戏",
+    "endGameConfirm": "你确定要结束游戏并返回主界面吗？",
+    "cancel": "取消",
+    "backToHome": "返回主界面",
+    "back": "返回",
+    "close": "关闭"
+  },
+  "footer": {
+    "credits": "致谢"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "刷新应用",
+    "notice": "本应用已经更新 - 你是否希望刷新界面进入新版本？"
+  }
+}
