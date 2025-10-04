@@ -16,8 +16,8 @@ export default class NavigationState {
   readonly numberOfRounds : number
 
   public constructor(route : RouteLocation, state: State) {    
-    this.round = parseInt(route.params['round'] as string)
-    this.turn = parseInt(route.params['turn'] as string)
+    this.round = Number.parseInt(route.params['round'] as string)
+    this.turn = Number.parseInt(route.params['turn'] as string)
     
     this.turnData = getTurn(this.round, this.turn, state.rounds)
     this.player = this.turnData.player
