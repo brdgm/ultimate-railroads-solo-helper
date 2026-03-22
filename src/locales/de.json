@@ -25,7 +25,7 @@
   "turnBot": {
     "title": "Emil",
     "placement": {
-      "worker": "Emil platziert {count} Arbeiter:",
+      "worker": "Emil platziert {count} Arbeiter: | Emil platziert {count} Arbeiter:",
       "coin": "Emil platziert 1 Münze aus dem Vorrat:",
       "worker-coin": "Emil platziert 1 Arbeiter und 1 Münze aus dem Vorrat:",
       "use-engineer-light-side": "Emil platziert 1 Arbeiter auf dem Feld mit der horizontalen Ingenieurin auf dem Spielplan:"
