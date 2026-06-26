@@ -42,7 +42,7 @@
     "title": "Player",
     "turn": "Take your turn.",
     "turnEmilPass1": "Emil has passed, take your remaining turns.",
-    "turnEmilPass2": "In case Emil get's another worker during your turn, click on <i>Next</i>.",
+    "turnEmilPass2": "In case Emil gets another worker during your turn, click on <i>Next</i>.",
     "turnEmilDeckExhausted": "Emils card deck is exhausted, take your remaining turns.",
     "action": {
       "endRound": "End Round {round}"
@@ -80,7 +80,7 @@
       },
       "emilGetsNewToys": {
         "title": "Emil Gets New Toys",
-        "rule": "As soon as you reach 50 points on the scoring track, give Emil 1 of the 2 workers next to the 50 point space. He has 7 workers from now on. When you reach 150 points, give Emil his last worker. Most of the time, this will happen during scoring phases. If you passes these milestones while placing workers, and before Emil has passed, then he can use the new worker during the current round."
+        "rule": "As soon as you reach 50 points on the scoring track, give Emil 1 of the 2 workers next to the 50 point space. He has 7 workers from now on. When you reach 150 points, give Emil his last worker. Most of the time, this will happen during scoring phases. If you pass these milestones while placing workers, and before Emil has passed, then he can use the new worker during the current round."
       }
     }
   },
